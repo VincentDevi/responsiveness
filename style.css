@@ -8,39 +8,30 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
 }
-#small{
-    display: block;
-    
+.stacked{
+    position: absolute;
 }
-#medium{
-    display: none;
-    
-}
-#large{
-    display: none;
-    
-}
+
 
 @media (min-width: 481px) and (max-width: 1023px) {
     body{
         background-color: green;
         font-family: 'Edu QLD Beginner', cursive;
         font-size: 30px;
-        
-    }
+        display: flex;
+    }  
     #small{
-        display: none;
-        
+        flex-basis: 66.66%;
     }
     #medium{
-        display: block;
-        
+        flex-basis: 33.33%;
     }
     #large{
-        display: none;
-        
+        position: absolute;
     }
-    
+    .stacked{
+        position: relative;
+    }
     
 }
 @media (min-width: 1024px){
@@ -49,17 +40,9 @@ body{
         font-family: 'Roboto Mono', monospace;
         font-size: 20px;
         display: flex;
+        justify-content: flex-start;
     }
-    #small{
-        display: none;
-        
-    }
-    #medium{
-        display: none;
-        
-    }
-    #large{
-        display: block;
-        
+    .stacked{
+        position: relative;
     }
 }
